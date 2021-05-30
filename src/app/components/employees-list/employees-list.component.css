@@ -1,0 +1,12 @@
+.container{
+    margin-top: 40px;
+}
+.active-pink-2 input[type=search]:focus:not([readonly]) {
+    border-bottom: 1px solid #f48fb1;
+    box-shadow: 0 1px 0 0 #f48fb1;
+    }
+
+    .searchbox{
+        width: 100%;
+        margin-bottom: 5px;
+    }

@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div><i class='fas fa-car-side' style='font-size:30px'></i></div>
+    &nbsp;	
+    &nbsp;	
+    &nbsp;	
+    <a class="navbar-brand" routerLink='/' >Moadi Insurance</a>
+    <button (click)="toggleNavbar()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [class.show]="isOpen" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" routerLink='/' *ngIf="!isUser">Login <span class="sr-only">(current)</span></a>
+          </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink='/home' *ngIf="isUser">Home <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" routerLink='/customerlist' *ngIf="isUser">Customers <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" routerLink='/emoplyeelist' *ngIf="isUser">Employees <span class="sr-only"></span></a>
+          </li>
+          <button class="btn btn" style="color: red;" (click)="logout()" *ngIf="isUser">Logout </button>
+      </ul>
+    </div>
+  </nav>

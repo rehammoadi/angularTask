@@ -1,0 +1,36 @@
+<div class="container register-form">
+    <form #f="ngForm" (ngSubmit)="updateCustomer(f) ">
+        <div class="form">
+            <div class="note">
+                <p>Updating a customer</p>
+        </div>
+    
+            <div class="form-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control"  value="{{fname}}" ngModel name="updateFirstname"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" value="{{lname}}" ngModel name="updateLastname"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" value="{{phone}}" ngModel name="updatePhone" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" value="{{address}}" ngModel name="updateAddress" />
+                        </div>
+                    </div>
+                </div>
+                <!-- <button type="button" class="btnSubmit" >Update</button> -->
+                <div class="wrapper">
+                    <span class="group-btn">
+                        <button class="btn btn-primary btn-md" >UPDATE <i class="fas fa-sign-in-alt"></i></button>
+                    </span>
+            </div>
+            </div>
+        </div>
+    </form>
+</div> 

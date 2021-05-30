@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url('https://www.exoduscar.co.il/wp-content/uploads/2016/04/grey-car-background-e1470139295662.jpeg');
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

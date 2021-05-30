@@ -1,0 +1,55 @@
+<div class="container">
+    <h1>Add a new Employee</h1>
+    <div class="row">
+        <div class="col-md-offset-5 col-md-4 text-center">
+              <form #f="ngForm" (ngSubmit)="addemp(f)"><br>
+                <br>
+
+                <div class="form-check form-check-inline" style="width: max-content;">
+                <input ngModel name="fname" #firstname="ngModel" type="text" class="form-control input-sm chat-input" placeholder="First Name" required firstname/>
+                &nbsp;
+                &nbsp;
+                <input ngModel name="lname" #lastname="ngModel" type="text" class="form-control input-sm chat-input" placeholder="Last Name" required lastname/>
+                </div>
+                <br>
+                <div class="alert alert-danger" *ngIf="firstname.invalid && firstname.touched">First Name is required</div>
+                <div class="alert alert-danger" *ngIf="lastname.invalid && lastname.touched">Last Name is required</div>
+                <br>
+                <div class="form-check form-check-inline" style="width: max-content;">
+                    <input ngModel name="userid" #userid="ngModel" type="text" class="form-control input-sm chat-input" placeholder=" Id" required userid/>
+                    &nbsp;
+                &nbsp;
+                    <input ngModel name="username" #username="ngModel" type="text" class="form-control input-sm chat-input" placeholder="User Name" required username/>
+                </div>
+                <br>
+                <div class="alert alert-danger" *ngIf="userid.invalid && userid.touched">Id is required</div>
+                <div class="alert alert-danger" *ngIf="username.invalid && username.touched">User Name is required</div>
+                <br>
+                <input style="width: 406px;" ngModel name="phone" #phone="ngModel" type="text" class="form-control input-sm chat-input" placeholder="Phone Number" required phone />
+                <div class="alert alert-danger" *ngIf="phone.invalid && phone.touched">phone number is required</div>
+                <br>
+                <input style="width: 406px;" ngModel name="email" #email="ngModel" type="text" class="form-control input-sm chat-input" placeholder="E-mail" required email/>
+                <div class="alert alert-danger" *ngIf="email.invalid && email.touched">email is required</div>
+                <br>
+                <div class="form-check form-check-inline" style="width: max-content;">
+                    <input ngModel name="password" #password="ngModel" type="password" class="form-control input-sm chat-input" placeholder="Password" required password/>
+                    &nbsp;
+                &nbsp;
+                    <input ngModel name="confirmpassword" #confirmpassword="ngModel" type="password" class="form-control input-sm chat-input" placeholder="Confirm Password" required password/>
+                </div>
+                <div class="alert alert-danger" *ngIf="password.invalid && password.touched">Password is required</div>
+                <div class="alert alert-danger" *ngIf="password.value != confirmpassword.value">Password is not equal</div>
+                <br><br>
+                <div class="wrapper">
+                        <span class="group-btn">
+                            <button class="btn btn-primary btn-md" [disabled]='f.invalid' >ADD Employee <i class="fas fa-sign-in-alt"></i></button>
+                        </span>
+                </div>
+            </form>
+            &nbsp;
+            &nbsp;
+            <div class="alert alert-danger" *ngIf="errorMessage"> {{errorMessage}} </div>
+        </div>
+    </div>
+    <br><br><br>
+</div>

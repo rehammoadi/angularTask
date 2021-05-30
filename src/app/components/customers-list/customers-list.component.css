@@ -1,0 +1,10 @@
+.container{
+    margin-top: 40px;
+}
+.searchbox{
+    width: 100%;
+    margin-bottom: 5px;
+}
+.pointerCursor{
+    cursor: pointer;
+}
